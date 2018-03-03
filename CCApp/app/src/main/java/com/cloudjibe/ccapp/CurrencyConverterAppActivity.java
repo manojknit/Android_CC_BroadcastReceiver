@@ -69,12 +69,12 @@ public class CurrencyConverterAppActivity extends AppCompatActivity {
     public void onGenerateClick(View view) {
         //EditText e=(EditText)findViewById(R.id.etSimulationCount);
         //int limit = Integer.parseInt(e.getText().toString());
-        testSendBroadcast();
+        sendBroadcastToExchange();
 
     }
 
 
-    private void testSendBroadcast()
+    private void sendBroadcastToExchange()
     {
         //Create an intent with an action
         final Intent broadcastIntent = new Intent("com.cloudjibe.ccapp.intents.exchange");

@@ -17,9 +17,6 @@ public class ExchangeReceiver extends BroadcastReceiver
     @Override
     public void onReceive(Context context, Intent intent)
     {
-//        ActivityManager am = (ActivityManager)context.getSystemService(Context.ACTIVITY_SERVICE);
-//        ComponentName cn = am.getRunningTasks(1).get(0).topActivity;
-//        Activity currentActivity = ((BaseApp)context.getApplicationContext()).getCurrentActivity();
 
         Log.d(tag, "Exchange Receiver called. --Manoj");
         Toast.makeText(context, "Exchange Receiver Triggered"     , Toast.LENGTH_LONG).show();
@@ -27,10 +24,7 @@ public class ExchangeReceiver extends BroadcastReceiver
         String dollar = intent.getExtras().getString("dollar");
         String currencyto = intent.getStringExtra("currencyto");
         Toast.makeText(context, "Exchange Receiver Triggered"+dollar+","+ currencyto    , Toast.LENGTH_LONG).show();
-        //TextView tvd = (TextView)ExchangeActivity.findViewById(R.id.tvDollarValue);//getTextView();
-        //TextView tvc = (TextView)((ExchangeActivity)context).findViewById(R.id.tvConvertToValue);
-        //tvd.setText(dollar);
-        //tvc.setText(currencyto);
+
         PackageManager packageManager = context.getPackageManager();
 
         Intent intentReceiverActivity = packageManager.getLaunchIntentForPackage("com.cloudjibe.currencyexchange");
