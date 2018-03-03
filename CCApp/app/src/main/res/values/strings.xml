@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Currency Converter App</string>
+    <string name="action_settings">Settings</string>
+    <string-array name="currency_array">
+        <item>British Pound</item>
+        <item>Euro</item>
+        <item>Indian Rupee</item>
+    </string-array>
+</resources>
